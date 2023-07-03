@@ -1,0 +1,8 @@
+{% load csrf %}
+<form action="{% url 'home' %}" method="post">
+    {% csrf token %}
+
+    {{ form.as_p }}
+    <input name="submit" type="submit" value="Hash">
+
+</form>
